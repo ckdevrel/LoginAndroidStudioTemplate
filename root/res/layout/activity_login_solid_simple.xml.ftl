@@ -1,3 +1,4 @@
+<#if isToolbar>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,6 +18,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
 
     </android.support.design.widget.AppBarLayout>
+    </#if>
 
 
      <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:fillViewport="true"
-            app:layout_constraintBottom_toTopOf="@+id/parent_margin_bottom"
+            app:layout_constraintBottom_toTopOf="@+id/btn_login"
             app:layout_constraintLeft_toLeftOf="@+id/parent_margin_left"
             app:layout_constraintRight_toRightOf="@+id/parent_margin_right"
             app:layout_constraintTop_toTopOf="@+id/parent_margin_top">
@@ -45,15 +47,15 @@
                     android:id="@+id/edt_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#40000000"
                     android:cursorVisible="true"
                     android:hint="Mobile"
                     android:inputType="number"
                     android:maxLines="1"
                     android:padding="12dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#80FFFFFF"
+                     android:background="#FFFFFF"
+                    android:textColor="#212121"
+                    android:textColorHint="#727272"
                     android:textCursorDrawable="@null" />
 
 
@@ -61,8 +63,7 @@
                     android:id="@+id/edt_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="#40000000"
+                    android:layout_marginTop="24dp"
                     android:cursorVisible="true"
                     android:fontFamily="sans-serif"
                     android:hint="Password"
@@ -70,8 +71,9 @@
                     android:maxLines="1"
                     android:padding="12dp"
                     android:textSize="16sp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#80FFFFFF"
+                    android:background="#FFFFFF"
+                    android:textColor="#212121"
+                    android:textColorHint="#727272"
                     android:textCursorDrawable="@null" />
 
                 <TextView
@@ -79,42 +81,30 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Forgot Password ?"
-                    android:textColor="@android:color/white"
+                    android:textColor="#727272"
                     android:textSize="14sp"
-                    android:padding="16dp"
-                    android:alpha="0.9"/>
-
-
-                <Button
-                    android:id="@+id/btn_login"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="#6CC887"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:padding="10dp"
-                    android:text="LOGIN"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/white" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="OR"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:padding="16dp"
-                    android:alpha="0.8"/>
+                    android:padding="16dp"/>
 
 
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
 
-
+     <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FF4081"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="10dp"
+        android:text="LOGIN"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
         <android.support.constraint.Guideline
             android:id="@+id/guide_bottom_50"
@@ -139,15 +129,6 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.92" />
 
-
-        <android.support.constraint.Guideline
-            android:id="@+id/parent_margin_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.95" />
-
-
         <android.support.constraint.Guideline
             android:id="@+id/parent_margin_top"
             android:layout_width="wrap_content"
@@ -157,4 +138,6 @@
 
     </android.support.constraint.ConstraintLayout>
 
+<#if isToolbar>
 </android.support.design.widget.CoordinatorLayout>
+</#if>

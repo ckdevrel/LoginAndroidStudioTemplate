@@ -26,10 +26,8 @@
     <merge from="res/values/strings.xml.ftl"
              to="${escapeXmlAttribute(resOut)}/values/strings.xml" />
 
-    <#if isToolbar>
     <merge from="res/values/styles.xml.ftl"
             to="${escapeXmlAttribute(resOut)}/values/styles.xml" />
-    </#if>
 
     <!-- Decide what kind of layout(s) to add -->
 
@@ -58,20 +56,8 @@
 
     <open file="${escapeXmlAttribute(srcOut)}/${edtActivityName}.java" />
 
-    <!-- <copy from="res/drawable/ic_edit_pass_black.xml"
-            to="${escapeXmlAttribute(resOut)}/drawable/ic_edit_pass_black.xml" /> -->
 
-    <!-- <copy from="res/drawable/ic_edit_pass_white.xml"
-            to="${escapeXmlAttribute(resOut)}/drawable/ic_edit_pass_white.xml" />
-
-    <copy from="res/drawable/ic_edit_mobile_black.xml"
-            to="${escapeXmlAttribute(resOut)}/drawable/ic_edit_mobile_black.xml" />
-
-    <copy from="res/drawable/ic_edit_mobile_white.xml"
-            to="${escapeXmlAttribute(resOut)}/drawable/ic_edit_mobile_white.xml" /> -->
-    <#if loginstyle == 'solidicon' || loginstyle == 'underlineicon' || loginstyle == 'strokeicon'>
     <copy from="res/drawable"
             to="${escapeXmlAttribute(resOut)}/drawable" />
-    </#if>
 
 </recipe>

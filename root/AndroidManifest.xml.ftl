@@ -2,11 +2,13 @@
 
     <application>
         <activity android:name="${packageName}.${edtActivityName}"
+            
             <#if isToolbar>
-            android:theme="@style/AppTheme.Template.Base">
+            android:theme="@style/AppTheme.Template.Base"
             <#else>
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
             </#if>
+            android:windowSoftInputMode="adjustResize">
             <#if isLauncher>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

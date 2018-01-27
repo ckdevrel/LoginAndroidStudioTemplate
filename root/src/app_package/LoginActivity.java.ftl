@@ -25,7 +25,10 @@ public class ${edtActivityName} extends AppCompatActivity implements ${edtActivi
     private Button btnLogin;
 
     private ${edtActivityPresenterName} presenter;
+
+    <#if isToolbar>
     private Toolbar toolbar;
+    </#if>
 
 
     @Override
@@ -38,18 +41,22 @@ public class ${edtActivityName} extends AppCompatActivity implements ${edtActivi
         presenter.attachView(this);
 
         initView();
-        initToolbar();
 
+        <#if isToolbar>
+        initToolbar();
+        </#if>
     }
 
 
 
-
+    <#if isToolbar>
     private void initToolbar() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        getSupportActionBar().setTitle("TakeoffAndroid");
+        getSupportActionBar().setTitle("Login Template");
     }
+    </#if>
+  
 
 
     @Override
@@ -99,7 +106,9 @@ public class ${edtActivityName} extends AppCompatActivity implements ${edtActivi
         edtPass = (EditText) findViewById(R.id.edt_pass);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnLogin.setOnClickListener(this);
+        <#if isToolbar>
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        </#if>
     }
 
     @Override
