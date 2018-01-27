@@ -34,7 +34,7 @@
   <!-- 128x128 thumbnails relative to template.xml -->
   <thumbs>
     <!-- default thumbnail is required -->
-    <thumb>templates_adapter.png</thumb>
+    <thumb>LogingTemplateThumbnail.png</thumb>
 
   </thumbs>
 
