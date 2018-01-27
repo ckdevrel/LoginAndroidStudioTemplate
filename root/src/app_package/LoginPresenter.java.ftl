@@ -4,29 +4,27 @@ package ${packageName};
 import ${applicationPackage}.ValidationUtils;
 </#if>
 
-import com.takeoffandroid.logintemplate.utils.ValidationUtils;
-
 
 public class ${edtActivityPresenterName}  {
 
 
-    private LoginView loginView;
+    private ${edtActivityViewName} view;
 
 
-    public LoginPresenter() {
+    public ${edtActivityPresenterName}() {
     }
 
 
-    public void attachView(LoginView loginView) {
-        this.loginView = loginView;
+    public void attachView(${edtActivityViewName} view) {
+        this.view = view;
     }
 
     public void detachView() {
-        loginView = null;
+        view = null;
     }
 
 
-    public void doLogin(LoginModel model){
+    public void doLogin(${edtActivityModelName} model){
 
         String mobile = model.getMobile();
         String password = model.getPassword();
@@ -34,20 +32,20 @@ public class ${edtActivityPresenterName}  {
         boolean error = false;
 
         if (!ValidationUtils.isValidString(mobile)){
-            loginView.onMobileNumberEmpty();
+            view.onMobileNumberEmpty();
             error = true;
             return;
         }
 
 
         if (!ValidationUtils.isValidString(password)){
-            loginView.onPasswordEmpty();
+            view.onPasswordEmpty();
             error = true;
             return;
         }
 
         if (!ValidationUtils.isValidPassword(password)){
-            loginView.onPasswordInvalid();
+            view.onPasswordInvalid();
             error = true;
             return;
         }
@@ -55,7 +53,7 @@ public class ${edtActivityPresenterName}  {
 
 
         if (!error){
-            loginView.onValidationSuccess(model);
+            view.onValidationSuccess(model);
             return;
         }
 

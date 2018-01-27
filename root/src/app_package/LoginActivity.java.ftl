@@ -17,16 +17,15 @@ import ${applicationPackage}.R;
 import ${applicationPackage}.utils.Utils;
 </#if>
 
-public class ${edtActivityName} extends AppCompatActivity implements LoginView, View.OnClickListener{
+public class ${edtActivityName} extends AppCompatActivity implements ${edtActivityViewName}, View.OnClickListener{
 
     private EditText edtMobile;
 
     private EditText edtPass;
     private Button btnLogin;
 
-    private LoginPresenter presenter;
+    private ${edtActivityPresenterName} presenter;
     private Toolbar toolbar;
-
 
 
     @Override
@@ -35,7 +34,7 @@ public class ${edtActivityName} extends AppCompatActivity implements LoginView, 
 
         setContentView(R.layout.${edtActivityLayoutName});
 
-        presenter = new LoginPresenter();
+        presenter = new ${edtActivityPresenterName}();
         presenter.attachView(this);
 
         initView();
@@ -63,7 +62,7 @@ public class ${edtActivityName} extends AppCompatActivity implements LoginView, 
 
             case R.id.btn_login:
 
-                presenter.doLogin(new LoginModel(email, password));
+                presenter.doLogin(new ${edtActivityModelName}(email, password));
                 break;
 
         }
@@ -71,33 +70,28 @@ public class ${edtActivityName} extends AppCompatActivity implements LoginView, 
 
 
     @Override
-    public void onValidationSuccess(LoginModel model) {
+    public void onValidationSuccess(${edtActivityModelName} model) {
 
-        Utils.showSnackShort(btnLogin, "Validation Success");
     }
 
     @Override
     public void onMobileNumberEmpty() {
 
-        Utils.showSnackShort(btnLogin, "Mobile Number should not be empty");
 
     }
 
     @Override
     public void onPasswordEmpty() {
 
-        Utils.showSnackShort(btnLogin, "Password should not be empty");
 
     }
 
     @Override
     public void onMobileNumberInvalid() {
-        Utils.showSnackShort(btnLogin, "Mobile Number is Invalid");
     }
 
     @Override
     public void onPasswordInvalid() {
-        Utils.showSnackShort(btnLogin, "Password is Invalid");
     }
 
     private void initView() {

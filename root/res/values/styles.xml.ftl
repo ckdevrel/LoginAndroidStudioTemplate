@@ -4,12 +4,13 @@
 
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="colorPrimary">#5f8ee4</item>
-        <item name="colorPrimaryDark">#5f8ee4</item>
-        <item name="colorAccent">#6CC887</item>
-        <item name="actionMenuTextColor">#6CC887</item>
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#3F51B5</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="actionMenuTextColor">#FF4081</item>
 
     </style>
+
 
     <style name="ToolbarStyle" parent="@style/ThemeOverlay.AppCompat.ActionBar">
 
@@ -22,9 +23,11 @@
 
    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
        <!-- Customize your theme here. -->
-       <item name="colorPrimary">#5f8ee4</item>
-       <item name="colorPrimaryDark">#5f8ee4</item>
-       <item name="colorAccent">#6CC887</item>
+       <item name="colorPrimary">#3F51B5</item>
+       <item name="colorPrimaryDark">#3F51B5</item>
+       <item name="colorAccent">#FF4081</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
    </style>
 
 
@@ -65,7 +68,7 @@
 
 
        <style name="TextInputLayout.HintTextAppearance" parent="@android:style/TextAppearance">
-           <item name="android:textColor">#6CC887</item>
+           <item name="android:textColor">#FF4081</item>
            <item name="android:textSize">16sp</item>
        </style>
        
