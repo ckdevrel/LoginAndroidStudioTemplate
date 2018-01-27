@@ -57,7 +57,21 @@
     <open file="${escapeXmlAttribute(srcOut)}/${edtActivityName}.java" />
 
 
-    <copy from="res/drawable"
-            to="${escapeXmlAttribute(resOut)}/drawable" />
+    <#if loginstyle == 'solidicon' || loginstyle == 'underlineicon' || loginstyle == 'strokeicon'>
+
+    <copy from="res/drawable/ic_edit_mobile.xml"
+            to="${escapeXmlAttribute(resOut)}/drawable/ic_edit_mobile.xml" />
+
+    <copy from="res/drawable/ic_edit_pass.xml"
+            to="${escapeXmlAttribute(resOut)}/drawable/ic_edit_pass.xml" />
+
+    </#if>
+
+    <#if loginstyle == 'strokeicon' || loginstyle == 'strokesimple'>
+
+    <copy from="res/drawable/edt_background_white_rounded.xml"
+            to="${escapeXmlAttribute(resOut)}/drawable/edt_background_white_rounded.xml" />
+    </#if>
+
 
 </recipe>

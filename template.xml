@@ -15,7 +15,7 @@
 
   <parameter id="edtActivityPresenterName" name="Activity Presenter Name" type="string" constraints="class|unique|nonempty"  default="LoginPresenter" help="The name of the presenter class to create"/>
 
-  <parameter id="edtActivityModelName" name="Activity Model Name" type="string" constraints="class|unique|nonempty"  default="LoginModel" help="The name of the model class to create"/>
+  <parameter id="edtActivityModelName" name="Activity Model Name" type="string" constraints="class|nonempty"  default="LoginModel" help="The name of the model class to create"/>
 
   <parameter id="edtActivityViewName" name="Activity View Name" type="string" constraints="class|unique|nonempty"  default="LoginView" help="The name of the view class to create"/>
 
