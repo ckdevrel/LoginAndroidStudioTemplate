@@ -14,11 +14,8 @@
         <dependency mavenUrl="com.android.support.constraint:constraint-layout:1.0.2"/>
     </#if>
 
-
     <!-- <dependency mavenUrl="com.jakewharton:butterknife:8.5.1"/> -->
-
     <!-- <dependency mavenUrl="com.jakewharton:butterknife-compiler:8.5.1"/> -->
-
 
     <merge from="AndroidManifest.xml.ftl"
              to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
@@ -34,18 +31,16 @@
     <instantiate from="res/layout/activity_login.xml.ftl"
               to="${escapeXmlAttribute(resOut)}/layout/${edtActivityLayoutName}.xml" />
 
-
-
     <instantiate from="src/app_package/LoginActivity.java.ftl"
                        to="${escapeXmlAttribute(srcOut)}/${edtActivityName}.java" />
 
-   <instantiate from="src/app_package/LoginModel.java.ftl"
+    <instantiate from="src/app_package/LoginModel.java.ftl"
                       to="${escapeXmlAttribute(srcOut)}/${edtActivityModelName}.java" />
 
-  <instantiate from="src/app_package/LoginPresenter.java.ftl"
+    <instantiate from="src/app_package/LoginPresenter.java.ftl"
                      to="${escapeXmlAttribute(srcOut)}/${edtActivityPresenterName}.java" />
 
-   <instantiate from="src/app_package/LoginView.java.ftl"
+    <instantiate from="src/app_package/LoginView.java.ftl"
                       to="${escapeXmlAttribute(srcOut)}/${edtActivityViewName}.java" />
 
 

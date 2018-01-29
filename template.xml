@@ -1,26 +1,81 @@
 <?xml version="1.0"?>
-<template format="3" revision="1" name="LoginTemplate" minApi="7" minBuildApi="14" description="Creates a new Activity or Fragment with custom RecyclerView Adapter.">
+<template format="3" 
+          revision="1" 
+          name="LoginTemplate" 
+          minApi="7" 
+          minBuildApi="14" 
+          description="Creates a new Activity">
 
-  <category value="Other"/>
+  <category value="Authentication"/>
 
-  <parameter id="edtActivityName" name="Activity Name" type="string" constraints="class|unique|nonempty"  default="LoginActivity" help="The name of the activity class to create"/>
+  <parameter 
+      id="edtActivityName" 
+      name="Activity Name" 
+      default="LoginActivity" 
+      type="string" 
+      constraints="class|unique|nonempty"  
+      help="The name of the activity class to create"/>
 
-  <parameter id="edtActivityLayoutName" name="Layout Name" type="string" constraints="layout|unique|nonempty"  suggest="activity_${classToResource(edtActivityName)}" default="activity_login" help="The name of the layout to create for the activity"/>
+  <parameter 
+      id="edtActivityLayoutName" 
+      name="Layout Name" 
+      type="string" 
+      constraints="layout|unique|nonempty"  
+      suggest="activity_${classToResource(edtActivityName)}" 
+      default="activity_login" 
+      help="The name of the layout to create for the activity"/>
 
-  <parameter id="isLauncher" name="Launcher Activity" type="boolean" default="false"  help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher"/>
+  <parameter 
+      id="isLauncher" 
+      name="Launcher Activity" 
+      type="boolean" 
+      default="false"  
+      help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher"/>
 
-  <parameter id="isToolbar" name="Need Toolbar" type="boolean" default="false"  help="If true, this activity will have a Toolbar"/>
+  <parameter 
+      id="isToolbar" 
+      name="Need Toolbar" 
+      type="boolean" 
+      default="false"  
+      help="If true, this activity will have a Toolbar"/>
 
-  <parameter id="packageName" name="Package name" type="string" constraints="package" default="com.mycompany.myapp"/>
+  <parameter 
+      id="packageName" 
+      name="Package name" 
+      type="string" 
+      constraints="package" 
+      default="com.mycompany.myapp"/>
 
-  <parameter id="edtActivityPresenterName" name="Activity Presenter Name" type="string" constraints="class|unique|nonempty"  default="LoginPresenter" help="The name of the presenter class to create"/>
+  <parameter 
+      id="edtActivityPresenterName" 
+      name="Activity Presenter Name" 
+      type="string" 
+      constraints="class|unique|nonempty"  
+      default="LoginPresenter" 
+      help="The name of the presenter class to create"/>
 
-  <parameter id="edtActivityModelName" name="Activity Model Name" type="string" constraints="class|nonempty"  default="LoginModel" help="The name of the model class to create"/>
+  <parameter 
+      id="edtActivityModelName" 
+      name="Activity Model Name" 
+      type="string" 
+      constraints="class|nonempty"  
+      default="LoginModel" 
+      help="The name of the model class to create"/>
 
-  <parameter id="edtActivityViewName" name="Activity View Name" type="string" constraints="class|unique|nonempty"  default="LoginView" help="The name of the view class to create"/>
+  <parameter 
+      id="edtActivityViewName" 
+      name="Activity View Name" 
+      type="string" 
+      constraints="class|unique|nonempty"  
+      default="LoginView" 
+      help="The name of the view class to create"/>
 
 
-  <parameter id="loginstyle" name="Login Fields Style" type="enum" default="solidsimple" help="Choose your own Login Fields style">
+  <parameter id="loginstyle" 
+             name="Login Fields Style" 
+             type="enum" 
+             default="solidsimple" 
+             help="Choose your own Login Fields style">             
     <option id="solidsimple">Solid Simple Style</option>
     <option id="solidicon">Solid Icon Style</option>
     <option id="underlinesimple">Undeline Simple Style</option>
