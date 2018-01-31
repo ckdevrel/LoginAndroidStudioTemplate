@@ -1,6 +1,3 @@
 <resources>
-    
-
     <string name="hello_world">Hello world!</string>
-   
 </resources>
