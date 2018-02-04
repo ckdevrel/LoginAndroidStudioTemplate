@@ -1,6 +1,12 @@
 # LoginAndroidStudioTemplate
 
 
+What you get?
+-------------
+
+This template generates code snippets for Login with Presenter, View, Model and Activity class. Following are the different styles of login fields that are generated from this template.
+  
+
 Solid Simple Style|Solid Icon Style|Stroke Simple Style|Stroke Icon Style        
 |-------------------------------|-----------------------------|-------------------------------|-----------------------------|
 |<a href="https://imgur.com/5aovyaF"><img src="https://i.imgur.com/5aovyaF.png" title="source: imgur.com" height="403" width="200"/></a>|<a href="https://imgur.com/20VXcZv"><img src="https://i.imgur.com/20VXcZv.png" title="source: imgur.com" height="403" width="200" /></a>|<a href="https://imgur.com/W8sIrfU"><img src="https://i.imgur.com/W8sIrfU.png" title="source: imgur.com" height="403" width="200"/></a>|<a href="https://imgur.com/6jBdMHo"><img src="https://i.imgur.com/6jBdMHo.png" title="source: imgur.com" height="403" width="200"/></a>
