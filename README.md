@@ -4,7 +4,7 @@
 What you get?
 -------------
 
-This template generates code snippets for Login with Presenter, View, Model and Activity class. Following are the different styles of login fields that are generated from this template.
+This template generates code snippets for Login with Presenter, View, Model and Activity classes. Following are the different styles of login fields that are generated from this template.
   
 
 Solid Simple Style|Solid Icon Style|Stroke Simple Style|Stroke Icon Style        
